@@ -36,6 +36,8 @@
     margin: 0 auto calc(var(--element-spacing) * 3) auto;
     transform: scale(1);
     transition: transform var(--duration-default) ease-in-out;
+    order: 3;
+
     @include mqmin($bp-xl) {
       padding: rem(24);
     }
@@ -54,10 +56,12 @@
       max-width: 75%;
     }
   }
-  &__link {
+  &__link,
+  &__wrapper {
     text-decoration: none;
     transition: all var(--duration-default) ease-in-out;
-    display: block;
+    display: flex;
+    flex-direction: column;
     [fill="currentColor"] {
       transition: all var(--duration-default) ease-in-out;
     }
