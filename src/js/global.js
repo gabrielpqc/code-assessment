@@ -154,6 +154,15 @@ document.querySelectorAll('.prevent-hashjump').forEach((link) => {
   });
 });
 
+document.querySelectorAll('.swiper-scroll-indicators').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    // Todo: add a data-attrivute to where we'd want to actually scroll to
+    // let targetcontainer = e.target.dataset;
+    let scrollEl = document.querySelector('.two-column-info-block');
+    scrollEl.scrollIntoView();
+  });
+});
+
 
 /*
  * Shopify Common JS
